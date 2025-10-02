@@ -53,12 +53,16 @@ That's it. The component handles everything else.
 
 ## 📋 Component Props
 
+The component supports **two usage modes**:
+
+### Mode 1: Simple Two-BOM Comparison (Recommended for Backend Integration)
+
 ```typescript
 interface BOMComparisonWrapperProps {
-  bom1: IProjectBOMResponse;           // Required - First BOM to compare
-  bom2: IProjectBOMResponse;           // Required - Second BOM to compare
-  leftLabel?: string;                  // Optional - Label for BOM 1 (default: "Version 1")
-  rightLabel?: string;                 // Optional - Label for BOM 2 (default: "Version 2")
+  bom1?: IProjectBOMResponse;           // Optional - First BOM to compare
+  bom2?: IProjectBOMResponse;           // Optional - Second BOM to compare
+  leftLabel?: string;                   // Optional - Label for BOM 1 (default: "Version 1")
+  rightLabel?: string;                  // Optional - Label for BOM 2 (default: "Version 2")
 }
 ```
 
@@ -71,6 +75,37 @@ interface BOMComparisonWrapperProps {
   rightLabel="Proposed BOM (v2.4)"
 />
 ```
+
+### Mode 2: Multiple BOMs with Dropdown Selector (Advanced)
+
+```typescript
+interface BOMComparisonWrapperProps {
+  bomList?: Array<{
+    id: string;                         // Unique identifier (e.g., "v1", "v2")
+    name: string;                       // Display name in dropdown
+    data: IProjectBOMResponse;          // BOM data
+  }>;
+}
+```
+
+**Example:**
+```typescript
+<BOMComparisonWrapper
+  bomList={[
+    { id: 'v1', name: 'Version 1.0 (Jan 2025)', data: bom1 },
+    { id: 'v2', name: 'Version 1.1 (Feb 2025)', data: bom2 },
+    { id: 'v3', name: 'Version 2.0 (Mar 2025)', data: bom3 },
+  ]}
+/>
+```
+- Shows a dropdown selector
+- User can switch between different BOM comparisons
+- Supports aggregate view across all BOMs
+- Auto-navigates to root BOM when selection changes
+
+**Which mode to use?**
+- **Simple comparison**: Use `bom1` and `bom2` props (most common)
+- **Multiple versions**: Use `bomList` prop (when comparing many versions)
 
 ---
 
@@ -291,6 +326,37 @@ function BOMComparisonPage() {
 }
 ```
 
+### Scenario 4: Multiple Versions with Dropdown
+
+```typescript
+function BOMVersionComparison({ projectId }: { projectId: string }) {
+  const [loading, setLoading] = useState(true);
+  const [versions, setVersions] = useState([]);
+
+  useEffect(() => {
+    // Backend returns array of BOM versions
+    fetch(`/api/project/${projectId}/bom-versions`)
+      .then(res => res.json())
+      .then(data => {
+        setVersions(data.versions); // Array of IProjectBOMResponse
+        setLoading(false);
+      });
+  }, [projectId]);
+
+  if (loading) return <CircularProgress />;
+
+  // Transform backend data to bomList format
+  const bomList = versions.map((version, index) => ({
+    id: `v${index + 1}`,
+    name: `Version ${version.version_number} (${version.created_datetime})`,
+    data: version
+  }));
+
+  return <BOMComparisonWrapper bomList={bomList} />;
+}
+```
+**Note**: Backend needs to return array of BOM versions for dropdown mode.
+
 ---
 
 ## ⚠️ Important Notes
@@ -449,6 +515,60 @@ const rightLabel = `${bom2.enterprise_bom.bom_code} - ${bom2.quantity} units`;
   <BOMComparisonWrapper bom1={...} bom2={...} />
 </ErrorBoundary>
 ```
+
+---
+
+## 🎯 What Your Backend Developer Needs to Know
+
+### ✅ Backend Contract Fully Supported
+
+Your backend developer specified that the component should:
+1. Accept props of type `IProjectBOMResponse` ✅
+2. Use these props to do the comparison ✅
+
+**Nothing has changed!** The component still fully supports the original requirement:
+
+```typescript
+// Original requirement - STILL WORKS
+<BOMComparisonWrapper
+  bom1={backendResponseVersion1}
+  bom2={backendResponseVersion2}
+/>
+```
+
+### 📦 What Backend Needs to Provide
+
+#### For Simple Comparison (Most Common):
+```
+GET /api/bom/compare?version1=xxx&version2=yyy
+Response:
+{
+  "version1": { /* IProjectBOMResponse */ },
+  "version2": { /* IProjectBOMResponse */ }
+}
+```
+
+#### For Multiple Versions with Dropdown (Optional):
+```
+GET /api/project/{projectId}/bom-versions
+Response:
+{
+  "versions": [
+    { /* IProjectBOMResponse for v1 */ },
+    { /* IProjectBOMResponse for v2 */ },
+    { /* IProjectBOMResponse for v3 */ }
+  ]
+}
+```
+
+**Key Point**: Backend only needs to return `IProjectBOMResponse` objects. The component handles everything else (comparison logic, UI, change detection, etc.)
+
+### 🔄 Backward Compatibility
+
+- ✅ All props are **optional** now
+- ✅ Original `bom1`/`bom2` usage still works
+- ✅ New `bomList` prop adds dropdown feature
+- ✅ No breaking changes for your frontend developer
 
 ---
 

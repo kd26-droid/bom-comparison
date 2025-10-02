@@ -220,7 +220,7 @@ function createModifiedVersion(baseData: any) {
   return modified;
 }
 
-// Create PCB Assembly BOM data - Version 1
+// Create PCB Assembly BOM data - Version 1 (based on bom example.txt)
 const pcbAssemblyBomV1 = {
   entry_id: "3b32d9b8-7fc7-4e38-a2d7-28907b77bcc9",
   base_bom_module_linkage_id: "d0cf0be9-5e84-477c-a5a8-fb98d2550ea5",
@@ -232,8 +232,13 @@ const pcbAssemblyBomV1 = {
   deleted_by_user_id: null,
   enterprise_bom: {
     enterprise_bom_id: "95d993b1-05d9-4f83-bdde-d4d9cdc5fad9",
-    bom_code: "PCB001",
-    bom_name: "PCB Assembly - Motor Control Board"
+    bom_code: "PCB Assembly 1",
+    bom_name: "PCB Assembly - Motor Control Board (BOM 1)",
+    enterprise_item: null
+  },
+  project: {
+    project_id: "490a89a2-3a35-473b-8c4d-09d65a91a1dd",
+    project_code: "P000110"
   },
   quantity: 1,
   measurement_unit: {
@@ -243,9 +248,54 @@ const pcbAssemblyBomV1 = {
     measurement_unit_value_type: "DECIMAL",
     abbreviation: "pcs"
   },
+  currency: {
+    currency_code_abbreviation: "INR",
+    currency_name: "Indian Rupee",
+    currency_symbol: "₹",
+    entry_id: "a8c3e3fd-b05f-4d09-bd2f-9fedd07d0ec3"
+  },
   currency_id: "a8c3e3fd-b05f-4d09-bd2f-9fedd07d0ec3",
-  total: 450,
-  custom_sections: [],
+  total: 268,
+  custom_sections: [
+    {
+      custom_section_id: "dfcb6b54-f7bf-4f85-8391-48dc28ccd6bf",
+      name: "BOM",
+      section_type: "BOM",
+      status: "DRAFT",
+      custom_fields: [
+        {
+          custom_field_id: "fad86109-c3f0-460a-9267-1d403b708848",
+          name: "No. of boards",
+          type: "FLOAT",
+          value: null,
+          attachments: [],
+          description: "",
+          is_locked: true,
+          is_required: false,
+          is_visible: true,
+          is_negotiable: false,
+          is_mandatory: false
+        },
+        {
+          custom_field_id: "c97af2ee-dfd1-4f33-8ee4-14289ca3b2d9",
+          name: "Machine Rate per minute",
+          type: "FLOAT",
+          value: null,
+          attachments: [],
+          description: "",
+          is_locked: true,
+          is_required: false,
+          is_visible: true,
+          is_negotiable: false,
+          is_mandatory: false
+        }
+      ],
+      approve_users: [],
+      edit_users: [],
+      view_users: []
+    }
+  ],
+  slabs: [],
   bom_valid: true,
   has_sub_boms: true,
   sub_boms_valid: true,

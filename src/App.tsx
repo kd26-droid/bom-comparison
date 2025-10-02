@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Typography, Paper, ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { BOMComparisonWrapper } from './components/BOMComparisonWrapper';
-import { bomList } from './data/sampleData';
 
 // Create a custom Material-UI theme
 const theme = createTheme({
@@ -43,13 +42,8 @@ function App() {
           </Typography>
         </Paper>
 
-        {/* BOM Comparison Wrapper */}
-        <BOMComparisonWrapper
-          bom1={bomList[0].data}
-          bom2={bomList[1].data}
-          leftLabel="QAB1 - Version 1 (10 units)"
-          rightLabel="QAB1 - Version 2 (20 units)"
-        />
+        {/* BOM Comparison Wrapper - Uses internal sample data with dropdown selector */}
+        <BOMComparisonWrapper />
 
         {/* Footer */}
         <Paper sx={{ p: 2, mt: 4, textAlign: 'center' }}>
