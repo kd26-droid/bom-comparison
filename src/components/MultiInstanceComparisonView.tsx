@@ -9,10 +9,12 @@ import {
   Alert,
   Grid,
 } from '@mui/material';
-import { bomList } from '../data/sampleData';
 import { buildBOMTree, BOMTreeNode, flattenBOMTree } from '../utils/bomHierarchy';
 import { detectBOMTreeChanges } from '../utils/bomChangeDetection';
 import { IBOMItem } from '../types/interfaces';
+
+// Note: This component currently re-computes BOM trees internally.
+// TODO: Refactor to accept pre-computed trees and changes from parent component
 
 interface MultiInstanceComparisonViewProps {
   changes: any[];  // Array of AggregatedChange objects
@@ -34,88 +36,35 @@ export const MultiInstanceComparisonView: React.FC<MultiInstanceComparisonViewPr
   categoryTitle,
   categoryType,
 }) => {
-  // Find all instances of all items across all BOMs
+  // Simplified view: just show the changes list
+  // TODO: Full multi-instance view needs refactoring for single BOM comparison
   const allInstances = useMemo(() => {
-    const foundInstances: Array<{ itemCode: string; itemName: string; instances: ItemInstance[] }> = [];
-
-    // Group changes by item code
-    changes.forEach((change) => {
-      const itemCode = change.code;
-      const itemName = change.name;
-      const itemInstances: ItemInstance[] = [];
-
-      // Compare specific BOM pairs: QAB1 (0→1) and PCB Assembly (2→3)
-      const bomPairs = [
-        { leftIndex: 0, rightIndex: 1, name: 'QAB1' },
-        { leftIndex: 2, rightIndex: 3, name: 'PCB Assembly' }
-      ];
-
-      for (const pair of bomPairs) {
-        if (pair.rightIndex >= bomList.length) continue; // Skip if index out of bounds
-
-        const leftBomData = bomList[pair.leftIndex].data;
-        const rightBomData = bomList[pair.rightIndex].data;
-        const bomName = pair.name;
-
-        const leftTree = buildBOMTree(leftBomData);
-        const rightTree = buildBOMTree(rightBomData);
-        const changeMap = detectBOMTreeChanges(leftTree, rightTree);
-
-        // Flatten both trees and find items matching the code
-        const leftFlat = flattenBOMTree(leftTree);
-        const rightFlat = flattenBOMTree(rightTree);
-
-        // Find all nodes with matching code (both raw materials and BOMs)
-        const leftMatches = leftFlat.filter(
-          (node) => node.code === itemCode
-        );
-        const rightMatches = rightFlat.filter(
-          (node) => node.code === itemCode
-        );
-
-        // Match by path
-        const allPaths = new Set([
-          ...leftMatches.map((n) => n.path),
-          ...rightMatches.map((n) => n.path),
-        ]);
-
-        allPaths.forEach((path) => {
-          const leftNode = leftMatches.find((n) => n.path === path);
-          const rightNode = rightMatches.find((n) => n.path === path);
-          const changeInfo = changeMap.get(path);
-
-          if (!leftNode && !rightNode) return;
-
-          let changeType: 'added' | 'removed' | 'modified' | 'unchanged' = 'unchanged';
-          if (!leftNode) changeType = 'added';
-          else if (!rightNode) changeType = 'removed';
-          else if (changeInfo && changeInfo.changeType === 'modified') changeType = 'modified';
-
-          // Filter based on category type
-          const shouldInclude =
-            (categoryType === 'added' && changeType === 'added') ||
-            (categoryType === 'deleted' && changeType === 'removed') ||
-            (categoryType === 'changed' && changeType === 'modified');
-
-          if (!shouldInclude) return;
-
-          itemInstances.push({
-            bomName,
-            fullPath: path,
-            leftItem: leftNode ? (leftNode.data as IBOMItem) : null,
-            rightItem: rightNode ? (rightNode.data as IBOMItem) : null,
-            changeType,
-            changes: changeInfo?.changes || [],
-          });
-        });
-      }
-
-      if (itemInstances.length > 0) {
-        foundInstances.push({ itemCode, itemName, instances: itemInstances });
-      }
+    // Group by item code
+    const grouped: { [key: string]: typeof changes } = {};
+    changes.forEach(change => {
+      const key = change.code || 'unknown';
+      if (!grouped[key]) grouped[key] = [];
+      grouped[key].push(change);
     });
 
-    return foundInstances;
+    const mapCategoryType = (cat: typeof categoryType): 'added' | 'removed' | 'modified' | 'unchanged' => {
+      if (cat === 'deleted') return 'removed';
+      if (cat === 'changed') return 'modified';
+      return cat as 'added';
+    };
+
+    return Object.keys(grouped).map(code => ({
+      itemCode: code,
+      itemName: grouped[code][0]?.name || code,
+      instances: grouped[code].map((ch: any) => ({
+        bomName: 'Current BOM',
+        fullPath: ch.path || '',
+        leftItem: null,
+        rightItem: null,
+        changeType: mapCategoryType(categoryType),
+        changes: [],
+      }))
+    }));
   }, [changes, categoryType]);
 
   if (allInstances.length === 0) {

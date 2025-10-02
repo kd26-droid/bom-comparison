@@ -24,11 +24,8 @@ interface BOMComparisonPageProps {
   rightData: IProjectBOMResponse;
   leftLabel?: string;
   rightLabel?: string;
-  // NEW PROPS:
   autoNavigateTo?: string | null;  // Path to auto-navigate to
   onNavigationComplete?: () => void;  // Callback when navigation is done
-  selectedBOMId?: string | null;
-  onBOMChange?: (id: string | null) => void;
 }
 
 export const BOMComparisonPage: React.FC<BOMComparisonPageProps> = ({
@@ -38,8 +35,6 @@ export const BOMComparisonPage: React.FC<BOMComparisonPageProps> = ({
   rightLabel = 'Version 2',
   autoNavigateTo,
   onNavigationComplete,
-  selectedBOMId = null,
-  onBOMChange,
 }) => {
   // Build trees
   const leftTree = useMemo(() => buildBOMTree(leftData), [leftData]);

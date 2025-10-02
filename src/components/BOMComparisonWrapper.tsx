@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Box, Paper, Tabs, Tab, Typography, Stack } from '@mui/material';
-import { bomList } from '../data/sampleData';
+import { IProjectBOMResponse } from '../types/interfaces';
 import { buildBOMTree } from '../utils/bomHierarchy';
 import { detectBOMTreeChanges } from '../utils/bomChangeDetection';
 import { getStatsForTab, TabType, AggregatedChange } from '../utils/changeAggregation';
@@ -9,9 +9,20 @@ import { ChangesListModal } from './ChangesListModal';
 import { BOMComparisonPage } from './BOMComparisonPage';
 import { MultiInstanceComparisonView } from './MultiInstanceComparisonView';
 
-export const BOMComparisonWrapper: React.FC = () => {
+export interface BOMComparisonWrapperProps {
+  bom1: IProjectBOMResponse;
+  bom2: IProjectBOMResponse;
+  leftLabel?: string;
+  rightLabel?: string;
+}
+
+export const BOMComparisonWrapper: React.FC<BOMComparisonWrapperProps> = ({
+  bom1,
+  bom2,
+  leftLabel = 'Version 1',
+  rightLabel = 'Version 2',
+}) => {
   // State
-  const [selectedBOMId, setSelectedBOMId] = useState<string | null>(null); // Initially null = All BOMs
   const [selectedTab, setSelectedTab] = useState<TabType>('ITEM');
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState<'added' | 'deleted' | 'changed'>('added');
@@ -21,105 +32,19 @@ export const BOMComparisonWrapper: React.FC = () => {
   const [currentCategoryTitle, setCurrentCategoryTitle] = useState<string>('');
   const [currentCategoryType, setCurrentCategoryType] = useState<'added' | 'deleted' | 'changed'>('added');
 
-  // Get BOM data based on selection
-  const { leftData, rightData, leftLabel, rightLabel } = useMemo(() => {
-    if (!selectedBOMId) {
-      // No BOM selected - use first comparison as default for display, but generic labels
-      return {
-        leftData: bomList[0].data,
-        rightData: bomList[1].data,
-        leftLabel: 'Version 1 (Baseline)',
-        rightLabel: 'Version 2 (With Changes)',
-      };
-    }
+  // Use props directly
+  const leftData = bom1;
+  const rightData = bom2;
 
-    // Map BOM selection to appropriate comparison
-    // bom1 -> compare bomList[0] and bomList[1] (QAB1 V1 vs V2)
-    // bom3 -> compare bomList[2] and bomList[3] (PCB V1 vs V2)
-    if (selectedBOMId === 'bom1') {
-      return {
-        leftData: bomList[0].data,
-        rightData: bomList[1].data,
-        leftLabel: bomList[0].name,
-        rightLabel: bomList[1].name,
-      };
-    } else if (selectedBOMId === 'bom3') {
-      return {
-        leftData: bomList[2].data,
-        rightData: bomList[3].data,
-        leftLabel: bomList[2].name,
-        rightLabel: bomList[3].name,
-      };
-    }
-
-    // Default fallback
-    return {
-      leftData: bomList[0].data,
-      rightData: bomList[1].data,
-      leftLabel: 'Version 1 (Baseline)',
-      rightLabel: 'Version 2 (With Changes)',
-    };
-  }, [selectedBOMId]);
-
-  // Build trees and detect changes for current selection
+  // Build trees and detect changes
   const leftTree = useMemo(() => buildBOMTree(leftData), [leftData]);
   const rightTree = useMemo(() => buildBOMTree(rightData), [rightData]);
   const changeMap = useMemo(() => detectBOMTreeChanges(leftTree, rightTree), [leftTree, rightTree]);
 
-  // Build aggregate changes across all BOMs when none is selected
-  const aggregateChangeMaps = useMemo(() => {
-    const maps: Map<string, any>[] = [];
-    const trees: { left: any; right: any }[] = [];
-
-    // Compare QAB1: bomList[0] vs bomList[1]
-    const qab1Left = buildBOMTree(bomList[0].data);
-    const qab1Right = buildBOMTree(bomList[1].data);
-    const qab1Changes = detectBOMTreeChanges(qab1Left, qab1Right);
-    maps.push(qab1Changes);
-    trees.push({ left: qab1Left, right: qab1Right });
-
-    // Compare PCB Assembly: bomList[2] vs bomList[3]
-    const pcbLeft = buildBOMTree(bomList[2].data);
-    const pcbRight = buildBOMTree(bomList[3].data);
-    const pcbChanges = detectBOMTreeChanges(pcbLeft, pcbRight);
-    maps.push(pcbChanges);
-    trees.push({ left: pcbLeft, right: pcbRight });
-
-    return { maps, trees };
-  }, []);
-
-  // Get stats based on whether a BOM is selected
+  // Get stats
   const stats = useMemo(() => {
-    if (selectedBOMId) {
-      // Single BOM comparison - add bomId to changes
-      const bomStats = getStatsForTab(selectedTab, changeMap, leftTree, rightTree);
-      return {
-        added: bomStats.added.map(c => ({ ...c, bomId: selectedBOMId })),
-        deleted: bomStats.deleted.map(c => ({ ...c, bomId: selectedBOMId })),
-        changed: bomStats.changed.map(c => ({ ...c, bomId: selectedBOMId })),
-      };
-    }
-
-    // Aggregate across all BOMs
-    const allAdded: AggregatedChange[] = [];
-    const allDeleted: AggregatedChange[] = [];
-    const allChanged: AggregatedChange[] = [];
-
-    aggregateChangeMaps.maps.forEach((map, index) => {
-      const { left, right } = aggregateChangeMaps.trees[index];
-      const bomStats = getStatsForTab(selectedTab, map, left, right);
-
-      // Add bomId to each change based on index
-      // index 0 = bom1 (QAB1), index 1 = bom3 (PCB Assembly)
-      const bomId = index === 0 ? 'bom1' : 'bom3';
-
-      allAdded.push(...bomStats.added.map(c => ({ ...c, bomId })));
-      allDeleted.push(...bomStats.deleted.map(c => ({ ...c, bomId })));
-      allChanged.push(...bomStats.changed.map(c => ({ ...c, bomId })));
-    });
-
-    return { added: allAdded, deleted: allDeleted, changed: allChanged };
-  }, [selectedTab, changeMap, leftTree, rightTree, selectedBOMId, aggregateChangeMaps]);
+    return getStatsForTab(selectedTab, changeMap, leftTree, rightTree);
+  }, [selectedTab, changeMap, leftTree, rightTree]);
 
   // Handle box click - only open modal, don't auto-select BOM
   const handleBoxClick = (type: 'added' | 'deleted' | 'changed') => {
@@ -171,29 +96,6 @@ export const BOMComparisonWrapper: React.FC = () => {
       {/* Stats Boxes */}
       <StatsSummaryBoxes stats={stats} onBoxClick={handleBoxClick} />
 
-      {/* BOM Selector - Always Visible */}
-      <Paper sx={{ p: 2.5, mb: 3, backgroundColor: '#ffffff', border: '1px solid #e5e7eb' }}>
-        <Typography variant="caption" sx={{ mb: 1.5, color: '#6b7280', fontWeight: 600, display: 'block' }}>
-          Select BOM to Compare
-        </Typography>
-        <select
-          value={selectedBOMId || ''}
-          onChange={(e) => setSelectedBOMId(e.target.value || null)}
-          style={{
-            width: '100%',
-            padding: '8px 12px',
-            border: '1px solid #e5e7eb',
-            borderRadius: '4px',
-            fontSize: '14px',
-            backgroundColor: '#ffffff',
-          }}
-        >
-          <option value="">All BOMs (Aggregated Changes)</option>
-          <option value="bom1">QAB1 Comparison</option>
-          <option value="bom3">PCB Assembly Comparison</option>
-        </select>
-      </Paper>
-
       {/* Conditional View: Multi-Instance or Regular Comparison */}
       {showMultiInstance ? (
         <Box>
@@ -204,15 +106,9 @@ export const BOMComparisonWrapper: React.FC = () => {
                 <Typography variant="h6" sx={{ fontWeight: 600, color: '#111827', mb: 0.5 }}>
                   {currentCategoryTitle}
                 </Typography>
-                {selectedBOMId ? (
-                  <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.875rem' }}>
-                    Viewing: {leftLabel} vs {rightLabel}
-                  </Typography>
-                ) : (
-                  <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.875rem' }}>
-                    Viewing: All BOMs (Aggregated Changes)
-                  </Typography>
-                )}
+                <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.875rem' }}>
+                  Viewing: {leftLabel} vs {rightLabel}
+                </Typography>
               </Box>
               <Paper
                 onClick={() => setShowMultiInstance(false)}
@@ -232,16 +128,12 @@ export const BOMComparisonWrapper: React.FC = () => {
           </Paper>
 
           <MultiInstanceComparisonView
-            changes={
-              selectedBOMId
-                ? currentCategoryChanges.filter(change => change.bomId === selectedBOMId)
-                : currentCategoryChanges
-            }
+            changes={currentCategoryChanges}
             categoryTitle={currentCategoryTitle}
             categoryType={currentCategoryType}
           />
         </Box>
-      ) : selectedBOMId ? (
+      ) : (
         <BOMComparisonPage
           leftData={leftData}
           rightData={rightData}
@@ -249,15 +141,7 @@ export const BOMComparisonWrapper: React.FC = () => {
           rightLabel={rightLabel}
           autoNavigateTo={autoNavigatePath}
           onNavigationComplete={() => setAutoNavigatePath(null)}
-          selectedBOMId={selectedBOMId}
-          onBOMChange={setSelectedBOMId}
         />
-      ) : (
-        <Paper sx={{ p: 4, textAlign: 'center', backgroundColor: '#f9fafb' }}>
-          <Typography variant="body1" color="text.secondary">
-            Please select a BOM from the dropdown above to view the comparison
-          </Typography>
-        </Paper>
       )}
 
       {/* Changes Modal */}

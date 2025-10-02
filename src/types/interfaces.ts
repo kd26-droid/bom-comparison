@@ -114,11 +114,20 @@ export interface IProjectBOMResponse {
   currency_id: string;
   total: number;
   custom_sections: ICustomSection[];
-  bom_items: IBOMItem[];
+  bom_items?: IBOMItem[];
   slabs: Array<{
     entry_id: string;
     quantity: number;
   }>;
+  // Additional fields from backend
+  has_sub_boms?: boolean;
+  bom_valid?: boolean;
+  sub_boms_valid?: boolean;
+  addProjectBOM?: boolean;
+  errors?: { [key: string]: string };
+  project?: {
+    project_id: string;
+  };
 }
 
 // Quote Data Structures
