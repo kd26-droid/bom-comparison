@@ -1,0 +1,2088 @@
+// SAMPLE BOM 1:
+{
+    "entry_id": "9926c634-e552-429e-a459-3f7a87b4b43d",
+    "base_bom_module_linkage_id": "972d0760-5e57-491b-9891-5cc59fdfbcca",
+    "created_datetime": "2025-09-09T14:17:30.515479Z",
+    "modified_datetime": "2025-09-09T14:18:30.599295Z",
+    "deleted_datetime": null,
+    "created_by_user_id": "4124ad07-5fc3-4fbc-ad5e-7d5a62b4ae36",
+    "modified_by_user_id": "4124ad07-5fc3-4fbc-ad5e-7d5a62b4ae36",
+    "deleted_by_user_id": null,
+    "enterprise_bom": {
+        "enterprise_bom_id": "d0fc8b14-da00-42a6-a1f1-ded6e3b38601",
+        "bom_code": "QAB1",
+        "bom_name": "QAB1",
+        "enterprise_item": {
+            "enterprise_item_id": "ab439e05-f271-4e7f-9c96-316cbda24f06",
+            "code": "A MAIN BOM",
+            "name": "A MAIN BOM",
+            "measurement_units": {
+                "item_measurement_units": [
+                    {
+                        "abbreviation": "units",
+                        "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                        "measurement_unit_category": "UNITS",
+                        "measurement_unit_value_type": "DECIMAL",
+                        "measurement_unit_primary_name": "Units"
+                    }
+                ]
+            },
+            "tags": []
+        }
+    },
+    "quantity": 10,
+    "measurement_unit": {
+        "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+        "measurement_unit_primary_name": "Units",
+        "measurement_unit_category": "UNITS",
+        "measurement_unit_value_type": "DECIMAL",
+        "abbreviation": "units"
+    },
+    "currency_id": "a8c3e3fd-b05f-4d09-bd2f-9fedd07d0ec3",
+    "total": 1840,
+    "custom_sections": [
+        {
+            "custom_section_id": "0f57a941-6beb-4857-afbd-a3c3cc9b09df",
+            "name": "BOM",
+            "section_type": "BOM",
+            "status": "DRAFT",
+            "custom_fields": [
+                {
+                    "custom_field_id": "496b5aff-5423-40ee-9972-41ac7aa46622",
+                    "name": "Glueing (sec)",
+                    "type": "FLOAT",
+                    "value": 1,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "6070ed2e-6242-4ddd-99c7-49f3a845e5a0",
+                    "name": "Consumables",
+                    "type": "FLOAT",
+                    "value": 1,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "66339413-1b08-4f5a-905a-41c1626e38fd",
+                    "name": "Potting (sec)",
+                    "type": "FLOAT",
+                    "value": 1,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                }
+            ],
+            "approve_users": [],
+            "edit_users": [],
+            "view_users": []
+        }
+    ],
+    "bom_items": [
+        {
+            "entry_id": "4316426a-bf8c-4931-bd39-ef0939098bb2",
+            "bom_item_id": "86dd24e6-326e-4791-af97-388193cb9a12",
+            "sub_bom": {
+                "enterprise_bom_id": "9f0774c1-b36f-4608-a3f9-44a2daef9c26",
+                "bom_code": "QASB1",
+                "bom_name": "QASB1",
+                "enterprise_item": {
+                    "enterprise_item_id": "94e0fc09-542f-429e-b59a-2103c6c3c26a",
+                    "code": "A SUB BOM 2",
+                    "name": "A SUB BOM 2",
+                    "measurement_units": {
+                        "item_measurement_units": [
+                            {
+                                "abbreviation": "units",
+                                "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                                "measurement_unit_category": "UNITS",
+                                "measurement_unit_value_type": "DECIMAL",
+                                "measurement_unit_primary_name": "Units"
+                            }
+                        ]
+                    },
+                    "tags": []
+                }
+            },
+            "sub_bom_items": [
+                {
+                    "entry_id": "51b0b006-161d-49a2-bfdf-a0d8a816d5ea",
+                    "bom_item_id": "44add9b6-5678-4c3a-ae7c-2b882d3e3d10",
+                    "sub_bom": {
+                        "enterprise_bom_id": "4d0de8a1-d2cd-4919-87b2-6a3cc1c12bf0",
+                        "bom_code": "QASSB1",
+                        "bom_name": "QASSB1",
+                        "enterprise_item": {
+                            "enterprise_item_id": "46fd903e-ca7b-453b-b90e-635aa224f304",
+                            "code": "A SUB BOM 1",
+                            "name": "A SUB BOM 1",
+                            "measurement_units": {
+                                "item_measurement_units": [
+                                    {
+                                        "abbreviation": "units",
+                                        "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                                        "measurement_unit_category": "UNITS",
+                                        "measurement_unit_value_type": "DECIMAL",
+                                        "measurement_unit_primary_name": "Units"
+                                    }
+                                ]
+                            },
+                            "tags": []
+                        }
+                    },
+                    "sub_bom_items": [
+                        {
+                            "entry_id": "23de8767-63a3-40bf-a74d-f2452ff61f9e",
+                            "bom_item_id": "c9d39e10-e13c-4c14-ad3c-20cf11202f54",
+                            "sub_bom": null,
+                            "sub_bom_items": null,
+                            "raw_material_item": {
+                                "enterprise_item_id": "002ceabd-5281-4d4f-98da-c6a802d2bd6f",
+                                "code": "RM1",
+                                "name": "RM1",
+                                "measurement_units": {
+                                    "item_measurement_units": [
+                                        {
+                                            "abbreviation": "pcs",
+                                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                            "measurement_unit_category": "UNITS",
+                                            "measurement_unit_value_type": "DECIMAL",
+                                            "measurement_unit_primary_name": "Pieces"
+                                        }
+                                    ]
+                                },
+                                "tags": [
+                                    "test1",
+                                    "test2",
+                                    "tag2",
+                                    "new tag",
+                                    "Capacitor"
+                                ]
+                            },
+                            "alternates": [
+                                {
+                                    "entry_id": "0c6677d9-030c-43cc-a3e7-20f866237241",
+                                    "bom_item_id": "6f15c7a0-9518-4326-a751-ff44e38e5250",
+                                    "sub_bom": null,
+                                    "sub_bom_items": null,
+                                    "raw_material_item": {
+                                        "enterprise_item_id": "215c1764-f92d-4bfa-bd49-bdd343ab1257",
+                                        "code": "RM10",
+                                        "name": "RM10",
+                                        "measurement_units": {
+                                            "item_measurement_units": [
+                                                {
+                                                    "abbreviation": "pcs",
+                                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                                    "measurement_unit_category": "UNITS",
+                                                    "measurement_unit_value_type": "DECIMAL",
+                                                    "measurement_unit_primary_name": "Pieces"
+                                                }
+                                            ]
+                                        },
+                                        "tags": [
+                                            "test1",
+                                            "test2",
+                                            "tag2",
+                                            "new tag",
+                                            "Capacitor"
+                                        ]
+                                    },
+                                    "alternates": [],
+                                    "quantity": 500,
+                                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "cost_per_unit": 1,
+                                    "delivery_schedule": [
+                                        {
+                                            "delivery_schedule_item_id": "32b5e902-52d7-4ab4-9bc2-78e4df790984",
+                                            "quantity": 500,
+                                            "delivery_date": null,
+                                            "fulfilment_information": {
+                                                "draft_rfq": "0E-20",
+                                                "ongoing_rfq": "500.0000000000",
+                                                "project_excess": "0E-20",
+                                                "project_pending": "0E-20"
+                                            }
+                                        }
+                                    ],
+                                    "custom_sections": [
+                                        {
+                                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                            "name": "Item Terms",
+                                            "section_type": "ITEM",
+                                            "status": "DRAFT",
+                                            "custom_fields": [],
+                                            "approve_users": [],
+                                            "edit_users": [],
+                                            "view_users": []
+                                        }
+                                    ],
+                                    "selected": true
+                                },
+                                {
+                                    "entry_id": "8a2665b9-8dc8-490d-8ba7-c0e594be4fed",
+                                    "bom_item_id": "fb8b1322-2836-429a-a3f5-b404b4b23b1d",
+                                    "sub_bom": null,
+                                    "sub_bom_items": null,
+                                    "raw_material_item": {
+                                        "enterprise_item_id": "0b900390-2c61-4951-b458-140a59461273",
+                                        "code": "RM100",
+                                        "name": "RM100",
+                                        "measurement_units": {
+                                            "item_measurement_units": [
+                                                {
+                                                    "abbreviation": "pcs",
+                                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                                    "measurement_unit_category": "UNITS",
+                                                    "measurement_unit_value_type": "DECIMAL",
+                                                    "measurement_unit_primary_name": "Pieces"
+                                                }
+                                            ]
+                                        },
+                                        "tags": [
+                                            "test1",
+                                            "test2",
+                                            "tag2",
+                                            "new tag",
+                                            "Capacitor"
+                                        ]
+                                    },
+                                    "alternates": [],
+                                    "quantity": 500,
+                                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "cost_per_unit": 1,
+                                    "delivery_schedule": [
+                                        {
+                                            "delivery_schedule_item_id": "94f50231-a561-4f5d-8fe2-faba005ad7c4",
+                                            "quantity": 500,
+                                            "delivery_date": null,
+                                            "fulfilment_information": {
+                                                "draft_rfq": "0E-20",
+                                                "ongoing_rfq": "500.0000000000",
+                                                "project_excess": "0E-20",
+                                                "project_pending": "0E-20"
+                                            }
+                                        }
+                                    ],
+                                    "custom_sections": [
+                                        {
+                                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                            "name": "Item Terms",
+                                            "section_type": "ITEM",
+                                            "status": "DRAFT",
+                                            "custom_fields": [],
+                                            "approve_users": [],
+                                            "edit_users": [],
+                                            "view_users": []
+                                        }
+                                    ],
+                                    "selected": true
+                                }
+                            ],
+                            "quantity": 500,
+                            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "cost_per_unit": 1,
+                            "delivery_schedule": [
+                                {
+                                    "delivery_schedule_item_id": "0cd1c27d-75dd-4e59-becb-53449ff6d5d3",
+                                    "quantity": 500,
+                                    "delivery_date": null,
+                                    "fulfilment_information": {
+                                        "draft_rfq": "0E-20",
+                                        "ongoing_rfq": "500.0000000000",
+                                        "project_excess": "0E-20",
+                                        "project_pending": "0E-20"
+                                    }
+                                }
+                            ],
+                            "custom_sections": [
+                                {
+                                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                    "name": "Item Terms",
+                                    "section_type": "ITEM",
+                                    "status": "DRAFT",
+                                    "custom_fields": [],
+                                    "approve_users": [],
+                                    "edit_users": [],
+                                    "view_users": []
+                                }
+                            ],
+                            "selected": true
+                        },
+                        {
+                            "entry_id": "f05cd6c3-67af-4952-b2c3-1aec2d3157ed",
+                            "bom_item_id": "b9be198a-bb50-420c-aa52-55c21cb9e553",
+                            "sub_bom": null,
+                            "sub_bom_items": null,
+                            "raw_material_item": {
+                                "enterprise_item_id": "98deeb38-a75c-4778-b154-b57a8ca97c04",
+                                "code": "RM2",
+                                "name": "RM2",
+                                "measurement_units": {
+                                    "item_measurement_units": [
+                                        {
+                                            "abbreviation": "pcs",
+                                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                            "measurement_unit_category": "UNITS",
+                                            "measurement_unit_value_type": "DECIMAL",
+                                            "measurement_unit_primary_name": "Pieces"
+                                        }
+                                    ]
+                                },
+                                "tags": [
+                                    "test1",
+                                    "test2",
+                                    "tag2",
+                                    "new tag",
+                                    "Capacitor"
+                                ]
+                            },
+                            "alternates": [],
+                            "quantity": 500,
+                            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "cost_per_unit": 1,
+                            "delivery_schedule": [
+                                {
+                                    "delivery_schedule_item_id": "99b9ec41-1df4-4fb7-b0d9-511be34d4cef",
+                                    "quantity": 500,
+                                    "delivery_date": null,
+                                    "fulfilment_information": {
+                                        "draft_rfq": "-500.00000000000000000000",
+                                        "ongoing_rfq": "1000.0000000000",
+                                        "project_excess": "0E-20",
+                                        "project_pending": "0E-20"
+                                    }
+                                }
+                            ],
+                            "custom_sections": [
+                                {
+                                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                    "name": "Item Terms",
+                                    "section_type": "ITEM",
+                                    "status": "DRAFT",
+                                    "custom_fields": [],
+                                    "approve_users": [],
+                                    "edit_users": [],
+                                    "view_users": []
+                                }
+                            ],
+                            "selected": true
+                        },
+                        {
+                            "entry_id": "b8855014-c2d4-4da8-b918-bb5183f52887",
+                            "bom_item_id": "d1135810-b2a6-476b-b489-c5fdf321ff44",
+                            "sub_bom": null,
+                            "sub_bom_items": null,
+                            "raw_material_item": {
+                                "enterprise_item_id": "2430f77f-1eea-40f8-879e-0b3539f3f8f5",
+                                "code": "RM3",
+                                "name": "RM3",
+                                "measurement_units": {
+                                    "item_measurement_units": [
+                                        {
+                                            "abbreviation": "pcs",
+                                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                            "measurement_unit_category": "UNITS",
+                                            "measurement_unit_value_type": "DECIMAL",
+                                            "measurement_unit_primary_name": "Pieces"
+                                        }
+                                    ]
+                                },
+                                "tags": [
+                                    "test1",
+                                    "test2",
+                                    "tag2",
+                                    "new tag",
+                                    "Capacitor"
+                                ]
+                            },
+                            "alternates": [],
+                            "quantity": 500,
+                            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "cost_per_unit": 1,
+                            "delivery_schedule": [
+                                {
+                                    "delivery_schedule_item_id": "b344706b-5f85-490e-960b-bf5e9d77ec23",
+                                    "quantity": 500,
+                                    "delivery_date": null,
+                                    "fulfilment_information": {
+                                        "draft_rfq": "0E-20",
+                                        "ongoing_rfq": "500.0000000000",
+                                        "project_excess": "0E-20",
+                                        "project_pending": "0E-20"
+                                    }
+                                }
+                            ],
+                            "custom_sections": [
+                                {
+                                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                    "name": "Item Terms",
+                                    "section_type": "ITEM",
+                                    "status": "DRAFT",
+                                    "custom_fields": [],
+                                    "approve_users": [],
+                                    "edit_users": [],
+                                    "view_users": []
+                                }
+                            ],
+                            "selected": true
+                        }
+                    ],
+                    "raw_material_item": null,
+                    "alternates": [],
+                    "quantity": 100,
+                    "measurement_unit": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                    "cost_per_unit": 15,
+                    "delivery_schedule": [],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "0f57a941-6beb-4857-afbd-a3c3cc9b09df",
+                            "name": "BOM",
+                            "section_type": "BOM",
+                            "status": "DRAFT",
+                            "custom_fields": [
+                                {
+                                    "custom_field_id": "2a93a39c-f83c-4e62-9c1d-5e2305eb77c2",
+                                    "name": "Consumables",
+                                    "type": "FLOAT",
+                                    "value": 3,
+                                    "attachments": [],
+                                    "description": "",
+                                    "is_locked": true,
+                                    "is_required": false,
+                                    "is_visible": true,
+                                    "is_negotiable": false,
+                                    "is_mandatory": false
+                                },
+                                {
+                                    "custom_field_id": "49f2ca54-c0d0-4d87-8cfc-83dde77d969e",
+                                    "name": "Potting (sec)",
+                                    "type": "FLOAT",
+                                    "value": 3,
+                                    "attachments": [],
+                                    "description": "",
+                                    "is_locked": true,
+                                    "is_required": false,
+                                    "is_visible": true,
+                                    "is_negotiable": false,
+                                    "is_mandatory": false
+                                },
+                                {
+                                    "custom_field_id": "9573be7c-daff-42d5-9fe5-b11bb14c4683",
+                                    "name": "Glueing (sec)",
+                                    "type": "FLOAT",
+                                    "value": 3,
+                                    "attachments": [],
+                                    "description": "",
+                                    "is_locked": true,
+                                    "is_required": false,
+                                    "is_visible": true,
+                                    "is_negotiable": false,
+                                    "is_mandatory": false
+                                }
+                            ],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                },
+                {
+                    "entry_id": "b3859e22-4482-4c0d-b573-7fa153cd72c4",
+                    "bom_item_id": "10b516bc-65f4-446a-8adb-59c741110b5e",
+                    "sub_bom": null,
+                    "sub_bom_items": null,
+                    "raw_material_item": {
+                        "enterprise_item_id": "2430f77f-1eea-40f8-879e-0b3539f3f8f5",
+                        "code": "RM3",
+                        "name": "RM3",
+                        "measurement_units": {
+                            "item_measurement_units": [
+                                {
+                                    "abbreviation": "pcs",
+                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "measurement_unit_category": "UNITS",
+                                    "measurement_unit_value_type": "DECIMAL",
+                                    "measurement_unit_primary_name": "Pieces"
+                                }
+                            ]
+                        },
+                        "tags": [
+                            "test1",
+                            "test2",
+                            "tag2",
+                            "new tag",
+                            "Capacitor"
+                        ]
+                    },
+                    "alternates": [],
+                    "quantity": 40,
+                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                    "cost_per_unit": 2,
+                    "delivery_schedule": [
+                        {
+                            "delivery_schedule_item_id": "73a33cc3-b289-4377-9355-edd4fcc5da57",
+                            "quantity": 40,
+                            "delivery_date": null,
+                            "fulfilment_information": {
+                                "draft_rfq": "-40.00000000000000000000",
+                                "ongoing_rfq": "80.0000000000",
+                                "project_excess": "0E-20",
+                                "project_pending": "0E-20"
+                            }
+                        }
+                    ],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                            "name": "Item Terms",
+                            "section_type": "ITEM",
+                            "status": "DRAFT",
+                            "custom_fields": [],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                },
+                {
+                    "entry_id": "c4c19a2e-2535-403c-b0f2-1760b0b43cdd",
+                    "bom_item_id": "a4b33b2b-a302-4754-93c0-100b2403b25c",
+                    "sub_bom": null,
+                    "sub_bom_items": null,
+                    "raw_material_item": {
+                        "enterprise_item_id": "aa05e74c-bf5e-43af-a97b-6e18c3cabc00",
+                        "code": "RM4",
+                        "name": "RM4",
+                        "measurement_units": {
+                            "item_measurement_units": [
+                                {
+                                    "abbreviation": "pcs",
+                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "measurement_unit_category": "UNITS",
+                                    "measurement_unit_value_type": "DECIMAL",
+                                    "measurement_unit_primary_name": "Pieces"
+                                }
+                            ]
+                        },
+                        "tags": [
+                            "test1",
+                            "test2",
+                            "tag2",
+                            "new tag",
+                            "Capacitor"
+                        ]
+                    },
+                    "alternates": [],
+                    "quantity": 80,
+                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                    "cost_per_unit": 1,
+                    "delivery_schedule": [
+                        {
+                            "delivery_schedule_item_id": "611052c1-2312-4f84-a2ee-18fcb5aded4d",
+                            "quantity": 80,
+                            "delivery_date": null,
+                            "fulfilment_information": {
+                                "draft_rfq": "0E-20",
+                                "ongoing_rfq": "80.0000000000",
+                                "project_excess": "0E-20",
+                                "project_pending": "0E-20"
+                            }
+                        }
+                    ],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                            "name": "Item Terms",
+                            "section_type": "ITEM",
+                            "status": "DRAFT",
+                            "custom_fields": [],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                }
+            ],
+            "raw_material_item": null,
+            "alternates": [],
+            "quantity": 20,
+            "measurement_unit": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+            "cost_per_unit": 83,
+            "delivery_schedule": [],
+            "custom_sections": [
+                {
+                    "custom_section_id": "0f57a941-6beb-4857-afbd-a3c3cc9b09df",
+                    "name": "BOM",
+                    "section_type": "BOM",
+                    "status": "DRAFT",
+                    "custom_fields": [
+                        {
+                            "custom_field_id": "727f0bf2-a886-4a49-83af-9dfaa79db56f",
+                            "name": "Potting (sec)",
+                            "type": "FLOAT",
+                            "value": 2,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        },
+                        {
+                            "custom_field_id": "78e1ab4c-afdc-4cab-9d2c-1d988b3ff27c",
+                            "name": "Glueing (sec)",
+                            "type": "FLOAT",
+                            "value": 2,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        },
+                        {
+                            "custom_field_id": "ac092711-f6e0-40e6-9c2c-acb3cd7140bd",
+                            "name": "Consumables",
+                            "type": "FLOAT",
+                            "value": 2,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        }
+                    ],
+                    "approve_users": [],
+                    "edit_users": [],
+                    "view_users": []
+                }
+            ],
+            "selected": true
+        },
+        {
+            "entry_id": "9c04c2b6-ce65-4edb-9147-dea73189d5ac",
+            "bom_item_id": "e3072a3a-ae78-42d8-9cac-2b27eeb350ad",
+            "sub_bom": {
+                "enterprise_bom_id": "d5224cdb-d4a6-47fe-9867-2ec1521d664b",
+                "bom_code": "QASB2",
+                "bom_name": "QASB2",
+                "enterprise_item": {
+                    "enterprise_item_id": "24931b6e-19b6-4355-9598-e1de33da1a2b",
+                    "code": "A SUB BOM 3",
+                    "name": "A SUB BOM 3",
+                    "measurement_units": {
+                        "item_measurement_units": [
+                            {
+                                "abbreviation": "units",
+                                "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                                "measurement_unit_category": "UNITS",
+                                "measurement_unit_value_type": "DECIMAL",
+                                "measurement_unit_primary_name": "Units"
+                            }
+                        ]
+                    },
+                    "tags": []
+                }
+            },
+            "sub_bom_items": [
+                {
+                    "entry_id": "b4436e70-9d51-47fa-b195-f4d57ffe67a9",
+                    "bom_item_id": "571573a3-9df4-4dae-91bf-2ca1cb63ce99",
+                    "sub_bom": null,
+                    "sub_bom_items": null,
+                    "raw_material_item": {
+                        "enterprise_item_id": "85ad1be6-5581-43de-84dd-a5886ac13c7c",
+                        "code": "RM5",
+                        "name": "RM5",
+                        "measurement_units": {
+                            "item_measurement_units": [
+                                {
+                                    "abbreviation": "pcs",
+                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "measurement_unit_category": "UNITS",
+                                    "measurement_unit_value_type": "DECIMAL",
+                                    "measurement_unit_primary_name": "Pieces"
+                                }
+                            ]
+                        },
+                        "tags": [
+                            "test1",
+                            "test2",
+                            "tag2",
+                            "new tag",
+                            "Capacitor"
+                        ]
+                    },
+                    "alternates": [],
+                    "quantity": 40,
+                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                    "cost_per_unit": 1,
+                    "delivery_schedule": [
+                        {
+                            "delivery_schedule_item_id": "debad4c1-d500-4a32-86e4-e4e626875824",
+                            "quantity": 40,
+                            "delivery_date": null,
+                            "fulfilment_information": {
+                                "draft_rfq": "0E-20",
+                                "ongoing_rfq": "40.0000000000",
+                                "project_excess": "0E-20",
+                                "project_pending": "0E-20"
+                            }
+                        }
+                    ],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                            "name": "Item Terms",
+                            "section_type": "ITEM",
+                            "status": "DRAFT",
+                            "custom_fields": [],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                },
+                {
+                    "entry_id": "e7f40925-c54e-4ac3-9345-e789dcabd4da",
+                    "bom_item_id": "d1decf96-fba2-40f6-a27e-ae9b1869ce8a",
+                    "sub_bom": null,
+                    "sub_bom_items": null,
+                    "raw_material_item": {
+                        "enterprise_item_id": "4ca53638-417d-4d59-83a5-e418f1f23781",
+                        "code": "RM6",
+                        "name": "RM6",
+                        "measurement_units": {
+                            "item_measurement_units": [
+                                {
+                                    "abbreviation": "pcs",
+                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "measurement_unit_category": "UNITS",
+                                    "measurement_unit_value_type": "DECIMAL",
+                                    "measurement_unit_primary_name": "Pieces"
+                                }
+                            ]
+                        },
+                        "tags": [
+                            "test1",
+                            "test2",
+                            "tag2",
+                            "new tag",
+                            "Capacitor"
+                        ]
+                    },
+                    "alternates": [],
+                    "quantity": 40,
+                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                    "cost_per_unit": 2,
+                    "delivery_schedule": [
+                        {
+                            "delivery_schedule_item_id": "ff327aae-c5ce-4cc7-803d-4280b5726a2b",
+                            "quantity": 40,
+                            "delivery_date": null,
+                            "fulfilment_information": {
+                                "draft_rfq": "0E-20",
+                                "ongoing_rfq": "40.0000000000",
+                                "project_excess": "0E-20",
+                                "project_pending": "0E-20"
+                            }
+                        }
+                    ],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                            "name": "Item Terms",
+                            "section_type": "ITEM",
+                            "status": "DRAFT",
+                            "custom_fields": [],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                }
+            ],
+            "raw_material_item": null,
+            "alternates": [],
+            "quantity": 20,
+            "measurement_unit": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+            "cost_per_unit": 6,
+            "delivery_schedule": [],
+            "custom_sections": [
+                {
+                    "custom_section_id": "0f57a941-6beb-4857-afbd-a3c3cc9b09df",
+                    "name": "BOM",
+                    "section_type": "BOM",
+                    "status": "DRAFT",
+                    "custom_fields": [
+                        {
+                            "custom_field_id": "1fbbe535-ff65-4b94-8489-e552c2cb0cfe",
+                            "name": "Consumables",
+                            "type": "FLOAT",
+                            "value": 4,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        },
+                        {
+                            "custom_field_id": "0b5ad427-522a-460f-b1fd-2c8269e21a08",
+                            "name": "Glueing (sec)",
+                            "type": "FLOAT",
+                            "value": 4,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        },
+                        {
+                            "custom_field_id": "cf5e5f66-c50c-4ff3-aeb3-0552f50a445b",
+                            "name": "Potting (sec)",
+                            "type": "FLOAT",
+                            "value": 4,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        }
+                    ],
+                    "approve_users": [],
+                    "edit_users": [],
+                    "view_users": []
+                }
+            ],
+            "selected": true
+        },
+        {
+            "entry_id": "2309aacb-5464-4d85-9e2d-8ea6f00eef6d",
+            "bom_item_id": "3b66fb52-ed7d-4764-be97-5feb7b8719ed",
+            "sub_bom": null,
+            "sub_bom_items": null,
+            "raw_material_item": {
+                "enterprise_item_id": "90bfae18-ba2e-4390-a3b0-f00a92802366",
+                "code": "RM7",
+                "name": "RM7",
+                "measurement_units": {
+                    "item_measurement_units": [
+                        {
+                            "abbreviation": "pcs",
+                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "measurement_unit_category": "UNITS",
+                            "measurement_unit_value_type": "DECIMAL",
+                            "measurement_unit_primary_name": "Pieces"
+                        }
+                    ]
+                },
+                "tags": [
+                    "test1",
+                    "test2",
+                    "tag2",
+                    "new tag",
+                    "Capacitor"
+                ]
+            },
+            "alternates": [],
+            "quantity": 20,
+            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+            "cost_per_unit": 1,
+            "delivery_schedule": [
+                {
+                    "delivery_schedule_item_id": "75c0d735-3464-476e-9c12-819ea1524bd0",
+                    "quantity": 20,
+                    "delivery_date": null,
+                    "fulfilment_information": {
+                        "draft_rfq": "0E-20",
+                        "ongoing_rfq": "20.0000000000",
+                        "project_excess": "0E-20",
+                        "project_pending": "0E-20"
+                    }
+                }
+            ],
+            "custom_sections": [
+                {
+                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                    "name": "Item Terms",
+                    "section_type": "ITEM",
+                    "status": "DRAFT",
+                    "custom_fields": [],
+                    "approve_users": [],
+                    "edit_users": [],
+                    "view_users": []
+                }
+            ],
+            "selected": true
+        },
+        {
+            "entry_id": "b54a4305-7daf-454a-b13d-ad732f3eea24",
+            "bom_item_id": "52da4d26-ab7e-43b7-8ea0-72e48da94c77",
+            "sub_bom": null,
+            "sub_bom_items": null,
+            "raw_material_item": {
+                "enterprise_item_id": "1687d1d7-d030-4767-bc2c-49b769e459c0",
+                "code": "RM8",
+                "name": "RM8",
+                "measurement_units": {
+                    "item_measurement_units": [
+                        {
+                            "abbreviation": "pcs",
+                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "measurement_unit_category": "UNITS",
+                            "measurement_unit_value_type": "DECIMAL",
+                            "measurement_unit_primary_name": "Pieces"
+                        }
+                    ]
+                },
+                "tags": [
+                    "test1",
+                    "test2",
+                    "tag2",
+                    "new tag",
+                    "Capacitor"
+                ]
+            },
+            "alternates": [],
+            "quantity": 20,
+            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+            "cost_per_unit": 2,
+            "delivery_schedule": [
+                {
+                    "delivery_schedule_item_id": "077170f0-1b32-441d-ba1f-067e18a6bfa1",
+                    "quantity": 20,
+                    "delivery_date": null,
+                    "fulfilment_information": {
+                        "draft_rfq": "0E-20",
+                        "ongoing_rfq": "20.0000000000",
+                        "project_excess": "0E-20",
+                        "project_pending": "0E-20"
+                    }
+                }
+            ],
+            "custom_sections": [
+                {
+                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                    "name": "Item Terms",
+                    "section_type": "ITEM",
+                    "status": "DRAFT",
+                    "custom_fields": [],
+                    "approve_users": [],
+                    "edit_users": [],
+                    "view_users": []
+                }
+            ],
+            "selected": true
+        }
+    ],
+    "slabs": [
+        {
+            "entry_id": "9926c634-e552-429e-a459-3f7a87b4b43d",
+            "quantity": 10
+        },
+        {
+            "entry_id": "48505402-8920-49e3-8742-0465dc66b6e4",
+            "quantity": 20
+        }
+    ]
+},
+
+// SAMPLE BOM 2:
+{
+    "entry_id": "48505402-8920-49e3-8742-0465dc66b6e4",
+    "base_bom_module_linkage_id": "972d0760-5e57-491b-9891-5cc59fdfbcca",
+    "created_datetime": "2025-09-09T14:17:30.515567Z",
+    "modified_datetime": "2025-09-09T14:19:29.717678Z",
+    "deleted_datetime": null,
+    "created_by_user_id": "4124ad07-5fc3-4fbc-ad5e-7d5a62b4ae36",
+    "modified_by_user_id": "4124ad07-5fc3-4fbc-ad5e-7d5a62b4ae36",
+    "deleted_by_user_id": null,
+    "enterprise_bom": {
+        "enterprise_bom_id": "d0fc8b14-da00-42a6-a1f1-ded6e3b38601",
+        "bom_code": "QAB1",
+        "bom_name": "QAB1",
+        "enterprise_item": {
+            "enterprise_item_id": "ab439e05-f271-4e7f-9c96-316cbda24f06",
+            "code": "A MAIN BOM",
+            "name": "A MAIN BOM",
+            "measurement_units": {
+                "item_measurement_units": [
+                    {
+                        "abbreviation": "units",
+                        "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                        "measurement_unit_category": "UNITS",
+                        "measurement_unit_value_type": "DECIMAL",
+                        "measurement_unit_primary_name": "Units"
+                    }
+                ]
+            },
+            "tags": []
+        }
+    },
+    "quantity": 20,
+    "measurement_unit": {
+        "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+        "measurement_unit_primary_name": "Units",
+        "measurement_unit_category": "UNITS",
+        "measurement_unit_value_type": "DECIMAL",
+        "abbreviation": "units"
+    },
+    "currency_id": "a8c3e3fd-b05f-4d09-bd2f-9fedd07d0ec3",
+    "total": 3680,
+    "custom_sections": [
+        {
+            "custom_section_id": "0f57a941-6beb-4857-afbd-a3c3cc9b09df",
+            "name": "BOM",
+            "section_type": "BOM",
+            "status": "DRAFT",
+            "custom_fields": [
+                {
+                    "custom_field_id": "6e8250cf-189d-407b-86cc-ecd93eaf7527",
+                    "name": "Potting (sec)",
+                    "type": "FLOAT",
+                    "value": 4,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "7d1866dd-8ffb-4ae5-8af5-e06619a96044",
+                    "name": "Glueing (sec)",
+                    "type": "FLOAT",
+                    "value": 4,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "844df189-3837-42b4-82e6-7744fc2ebe81",
+                    "name": "Consumables",
+                    "type": "FLOAT",
+                    "value": 4,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                }
+            ],
+            "approve_users": [],
+            "edit_users": [],
+            "view_users": []
+        }
+    ],
+    "bom_items": [
+        {
+            "entry_id": "6ccb6f35-6533-4e50-a36f-59a78718ff9b",
+            "bom_item_id": "86dd24e6-326e-4791-af97-388193cb9a12",
+            "sub_bom": {
+                "enterprise_bom_id": "9f0774c1-b36f-4608-a3f9-44a2daef9c26",
+                "bom_code": "QASB1",
+                "bom_name": "QASB1",
+                "enterprise_item": {
+                    "enterprise_item_id": "94e0fc09-542f-429e-b59a-2103c6c3c26a",
+                    "code": "A SUB BOM 2",
+                    "name": "A SUB BOM 2",
+                    "measurement_units": {
+                        "item_measurement_units": [
+                            {
+                                "abbreviation": "units",
+                                "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                                "measurement_unit_category": "UNITS",
+                                "measurement_unit_value_type": "DECIMAL",
+                                "measurement_unit_primary_name": "Units"
+                            }
+                        ]
+                    },
+                    "tags": []
+                }
+            },
+            "sub_bom_items": [
+                {
+                    "entry_id": "c76d8045-f117-4569-be69-0b582c3e962b",
+                    "bom_item_id": "44add9b6-5678-4c3a-ae7c-2b882d3e3d10",
+                    "sub_bom": {
+                        "enterprise_bom_id": "4d0de8a1-d2cd-4919-87b2-6a3cc1c12bf0",
+                        "bom_code": "QASSB1",
+                        "bom_name": "QASSB1",
+                        "enterprise_item": {
+                            "enterprise_item_id": "46fd903e-ca7b-453b-b90e-635aa224f304",
+                            "code": "A SUB BOM 1",
+                            "name": "A SUB BOM 1",
+                            "measurement_units": {
+                                "item_measurement_units": [
+                                    {
+                                        "abbreviation": "units",
+                                        "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                                        "measurement_unit_category": "UNITS",
+                                        "measurement_unit_value_type": "DECIMAL",
+                                        "measurement_unit_primary_name": "Units"
+                                    }
+                                ]
+                            },
+                            "tags": []
+                        }
+                    },
+                    "sub_bom_items": [
+                        {
+                            "entry_id": "9d082b77-849c-47ec-9528-55d9093ab5fb",
+                            "bom_item_id": "c9d39e10-e13c-4c14-ad3c-20cf11202f54",
+                            "sub_bom": null,
+                            "sub_bom_items": null,
+                            "raw_material_item": {
+                                "enterprise_item_id": "002ceabd-5281-4d4f-98da-c6a802d2bd6f",
+                                "code": "RM1",
+                                "name": "RM1",
+                                "measurement_units": {
+                                    "item_measurement_units": [
+                                        {
+                                            "abbreviation": "pcs",
+                                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                            "measurement_unit_category": "UNITS",
+                                            "measurement_unit_value_type": "DECIMAL",
+                                            "measurement_unit_primary_name": "Pieces"
+                                        }
+                                    ]
+                                },
+                                "tags": [
+                                    "test1",
+                                    "test2",
+                                    "tag2",
+                                    "new tag",
+                                    "Capacitor"
+                                ]
+                            },
+                            "alternates": [
+                                {
+                                    "entry_id": "9084436c-0ba3-427c-b7f1-ab0f6a71a1e0",
+                                    "bom_item_id": "6f15c7a0-9518-4326-a751-ff44e38e5250",
+                                    "sub_bom": null,
+                                    "sub_bom_items": null,
+                                    "raw_material_item": {
+                                        "enterprise_item_id": "215c1764-f92d-4bfa-bd49-bdd343ab1257",
+                                        "code": "RM10",
+                                        "name": "RM10",
+                                        "measurement_units": {
+                                            "item_measurement_units": [
+                                                {
+                                                    "abbreviation": "pcs",
+                                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                                    "measurement_unit_category": "UNITS",
+                                                    "measurement_unit_value_type": "DECIMAL",
+                                                    "measurement_unit_primary_name": "Pieces"
+                                                }
+                                            ]
+                                        },
+                                        "tags": [
+                                            "test1",
+                                            "test2",
+                                            "tag2",
+                                            "new tag",
+                                            "Capacitor"
+                                        ]
+                                    },
+                                    "alternates": [],
+                                    "quantity": 1000,
+                                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "cost_per_unit": 1,
+                                    "delivery_schedule": [
+                                        {
+                                            "delivery_schedule_item_id": "eb60a9e0-1cb1-4261-93fc-4e31ebade8f5",
+                                            "quantity": 1000,
+                                            "delivery_date": null,
+                                            "fulfilment_information": {
+                                                "draft_rfq": 0,
+                                                "ongoing_rfq": 0,
+                                                "project_excess": 0,
+                                                "project_pending": "1000.00000000000000000000"
+                                            }
+                                        }
+                                    ],
+                                    "custom_sections": [
+                                        {
+                                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                            "name": "Item Terms",
+                                            "section_type": "ITEM",
+                                            "status": "DRAFT",
+                                            "custom_fields": [],
+                                            "approve_users": [],
+                                            "edit_users": [],
+                                            "view_users": []
+                                        }
+                                    ],
+                                    "selected": true
+                                },
+                                {
+                                    "entry_id": "3f627c89-2f0c-4404-a5f2-21e50d73ed28",
+                                    "bom_item_id": "fb8b1322-2836-429a-a3f5-b404b4b23b1d",
+                                    "sub_bom": null,
+                                    "sub_bom_items": null,
+                                    "raw_material_item": {
+                                        "enterprise_item_id": "0b900390-2c61-4951-b458-140a59461273",
+                                        "code": "RM100",
+                                        "name": "RM100",
+                                        "measurement_units": {
+                                            "item_measurement_units": [
+                                                {
+                                                    "abbreviation": "pcs",
+                                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                                    "measurement_unit_category": "UNITS",
+                                                    "measurement_unit_value_type": "DECIMAL",
+                                                    "measurement_unit_primary_name": "Pieces"
+                                                }
+                                            ]
+                                        },
+                                        "tags": [
+                                            "test1",
+                                            "test2",
+                                            "tag2",
+                                            "new tag",
+                                            "Capacitor"
+                                        ]
+                                    },
+                                    "alternates": [],
+                                    "quantity": 1000,
+                                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "cost_per_unit": 1,
+                                    "delivery_schedule": [
+                                        {
+                                            "delivery_schedule_item_id": "2b08bb1b-8c25-4ad1-8c73-bb8fe46414b7",
+                                            "quantity": 1000,
+                                            "delivery_date": null,
+                                            "fulfilment_information": {
+                                                "draft_rfq": 0,
+                                                "ongoing_rfq": 0,
+                                                "project_excess": 0,
+                                                "project_pending": "1000.00000000000000000000"
+                                            }
+                                        }
+                                    ],
+                                    "custom_sections": [
+                                        {
+                                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                            "name": "Item Terms",
+                                            "section_type": "ITEM",
+                                            "status": "DRAFT",
+                                            "custom_fields": [],
+                                            "approve_users": [],
+                                            "edit_users": [],
+                                            "view_users": []
+                                        }
+                                    ],
+                                    "selected": true
+                                }
+                            ],
+                            "quantity": 1000,
+                            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "cost_per_unit": 1,
+                            "delivery_schedule": [
+                                {
+                                    "delivery_schedule_item_id": "72cf64aa-ea20-4bc8-bb85-5bc9686e2532",
+                                    "quantity": 1000,
+                                    "delivery_date": null,
+                                    "fulfilment_information": {
+                                        "draft_rfq": 0,
+                                        "ongoing_rfq": 0,
+                                        "project_excess": 0,
+                                        "project_pending": "1000.00000000000000000000"
+                                    }
+                                }
+                            ],
+                            "custom_sections": [
+                                {
+                                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                    "name": "Item Terms",
+                                    "section_type": "ITEM",
+                                    "status": "DRAFT",
+                                    "custom_fields": [],
+                                    "approve_users": [],
+                                    "edit_users": [],
+                                    "view_users": []
+                                }
+                            ],
+                            "selected": true
+                        },
+                        {
+                            "entry_id": "46450534-88b9-4860-81e7-35ae558b0650",
+                            "bom_item_id": "b9be198a-bb50-420c-aa52-55c21cb9e553",
+                            "sub_bom": null,
+                            "sub_bom_items": null,
+                            "raw_material_item": {
+                                "enterprise_item_id": "98deeb38-a75c-4778-b154-b57a8ca97c04",
+                                "code": "RM2",
+                                "name": "RM2",
+                                "measurement_units": {
+                                    "item_measurement_units": [
+                                        {
+                                            "abbreviation": "pcs",
+                                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                            "measurement_unit_category": "UNITS",
+                                            "measurement_unit_value_type": "DECIMAL",
+                                            "measurement_unit_primary_name": "Pieces"
+                                        }
+                                    ]
+                                },
+                                "tags": [
+                                    "test1",
+                                    "test2",
+                                    "tag2",
+                                    "new tag",
+                                    "Capacitor"
+                                ]
+                            },
+                            "alternates": [],
+                            "quantity": 1000,
+                            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "cost_per_unit": 1,
+                            "delivery_schedule": [
+                                {
+                                    "delivery_schedule_item_id": "31b16ea0-b455-41b0-a60b-e52a213bd220",
+                                    "quantity": 1000,
+                                    "delivery_date": null,
+                                    "fulfilment_information": {
+                                        "draft_rfq": 0,
+                                        "ongoing_rfq": 0,
+                                        "project_excess": 0,
+                                        "project_pending": "1000.00000000000000000000"
+                                    }
+                                }
+                            ],
+                            "custom_sections": [
+                                {
+                                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                    "name": "Item Terms",
+                                    "section_type": "ITEM",
+                                    "status": "DRAFT",
+                                    "custom_fields": [],
+                                    "approve_users": [],
+                                    "edit_users": [],
+                                    "view_users": []
+                                }
+                            ],
+                            "selected": true
+                        },
+                        {
+                            "entry_id": "3d2e78f9-fd18-4142-939d-d1011e8ec84a",
+                            "bom_item_id": "d1135810-b2a6-476b-b489-c5fdf321ff44",
+                            "sub_bom": null,
+                            "sub_bom_items": null,
+                            "raw_material_item": {
+                                "enterprise_item_id": "2430f77f-1eea-40f8-879e-0b3539f3f8f5",
+                                "code": "RM3",
+                                "name": "RM3",
+                                "measurement_units": {
+                                    "item_measurement_units": [
+                                        {
+                                            "abbreviation": "pcs",
+                                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                            "measurement_unit_category": "UNITS",
+                                            "measurement_unit_value_type": "DECIMAL",
+                                            "measurement_unit_primary_name": "Pieces"
+                                        }
+                                    ]
+                                },
+                                "tags": [
+                                    "test1",
+                                    "test2",
+                                    "tag2",
+                                    "new tag",
+                                    "Capacitor"
+                                ]
+                            },
+                            "alternates": [],
+                            "quantity": 1000,
+                            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "cost_per_unit": 1,
+                            "delivery_schedule": [
+                                {
+                                    "delivery_schedule_item_id": "d5fae9bb-381d-4f90-ab3e-6f7ad1d0f323",
+                                    "quantity": 1000,
+                                    "delivery_date": null,
+                                    "fulfilment_information": {
+                                        "draft_rfq": 0,
+                                        "ongoing_rfq": 0,
+                                        "project_excess": 0,
+                                        "project_pending": "1000.00000000000000000000"
+                                    }
+                                }
+                            ],
+                            "custom_sections": [
+                                {
+                                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                                    "name": "Item Terms",
+                                    "section_type": "ITEM",
+                                    "status": "DRAFT",
+                                    "custom_fields": [],
+                                    "approve_users": [],
+                                    "edit_users": [],
+                                    "view_users": []
+                                }
+                            ],
+                            "selected": true
+                        }
+                    ],
+                    "raw_material_item": null,
+                    "alternates": [],
+                    "quantity": 200,
+                    "measurement_unit": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                    "cost_per_unit": 15,
+                    "delivery_schedule": [],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "0f57a941-6beb-4857-afbd-a3c3cc9b09df",
+                            "name": "BOM",
+                            "section_type": "BOM",
+                            "status": "DRAFT",
+                            "custom_fields": [
+                                {
+                                    "custom_field_id": "04e0280e-13d1-41e6-935b-4d1101fa8929",
+                                    "name": "Glueing (sec)",
+                                    "type": "FLOAT",
+                                    "value": 2,
+                                    "attachments": [],
+                                    "description": "",
+                                    "is_locked": true,
+                                    "is_required": false,
+                                    "is_visible": true,
+                                    "is_negotiable": false,
+                                    "is_mandatory": false
+                                },
+                                {
+                                    "custom_field_id": "fa17eeba-00d3-4677-aa13-fa534e9aaf85",
+                                    "name": "Consumables",
+                                    "type": "FLOAT",
+                                    "value": 2,
+                                    "attachments": [],
+                                    "description": "",
+                                    "is_locked": true,
+                                    "is_required": false,
+                                    "is_visible": true,
+                                    "is_negotiable": false,
+                                    "is_mandatory": false
+                                },
+                                {
+                                    "custom_field_id": "386caa5a-a772-4548-9db4-77d2a20b83a6",
+                                    "name": "Potting (sec)",
+                                    "type": "FLOAT",
+                                    "value": 2,
+                                    "attachments": [],
+                                    "description": "",
+                                    "is_locked": true,
+                                    "is_required": false,
+                                    "is_visible": true,
+                                    "is_negotiable": false,
+                                    "is_mandatory": false
+                                }
+                            ],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                },
+                {
+                    "entry_id": "53f75a9a-0f6b-4b84-a32e-5df0b0ecd47a",
+                    "bom_item_id": "10b516bc-65f4-446a-8adb-59c741110b5e",
+                    "sub_bom": null,
+                    "sub_bom_items": null,
+                    "raw_material_item": {
+                        "enterprise_item_id": "2430f77f-1eea-40f8-879e-0b3539f3f8f5",
+                        "code": "RM3",
+                        "name": "RM3",
+                        "measurement_units": {
+                            "item_measurement_units": [
+                                {
+                                    "abbreviation": "pcs",
+                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "measurement_unit_category": "UNITS",
+                                    "measurement_unit_value_type": "DECIMAL",
+                                    "measurement_unit_primary_name": "Pieces"
+                                }
+                            ]
+                        },
+                        "tags": [
+                            "test1",
+                            "test2",
+                            "tag2",
+                            "new tag",
+                            "Capacitor"
+                        ]
+                    },
+                    "alternates": [],
+                    "quantity": 80,
+                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                    "cost_per_unit": 2,
+                    "delivery_schedule": [
+                        {
+                            "delivery_schedule_item_id": "5995ce69-6220-438a-8a9f-22d7a8314b9e",
+                            "quantity": 80,
+                            "delivery_date": null,
+                            "fulfilment_information": {
+                                "draft_rfq": 0,
+                                "ongoing_rfq": 0,
+                                "project_excess": 0,
+                                "project_pending": "80.00000000000000000000"
+                            }
+                        }
+                    ],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                            "name": "Item Terms",
+                            "section_type": "ITEM",
+                            "status": "DRAFT",
+                            "custom_fields": [],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                },
+                {
+                    "entry_id": "7bc47746-8ed4-4f48-9f11-1f9768dc98e2",
+                    "bom_item_id": "a4b33b2b-a302-4754-93c0-100b2403b25c",
+                    "sub_bom": null,
+                    "sub_bom_items": null,
+                    "raw_material_item": {
+                        "enterprise_item_id": "aa05e74c-bf5e-43af-a97b-6e18c3cabc00",
+                        "code": "RM4",
+                        "name": "RM4",
+                        "measurement_units": {
+                            "item_measurement_units": [
+                                {
+                                    "abbreviation": "pcs",
+                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "measurement_unit_category": "UNITS",
+                                    "measurement_unit_value_type": "DECIMAL",
+                                    "measurement_unit_primary_name": "Pieces"
+                                }
+                            ]
+                        },
+                        "tags": [
+                            "test1",
+                            "test2",
+                            "tag2",
+                            "new tag",
+                            "Capacitor"
+                        ]
+                    },
+                    "alternates": [],
+                    "quantity": 160,
+                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                    "cost_per_unit": 1,
+                    "delivery_schedule": [
+                        {
+                            "delivery_schedule_item_id": "c9c3e5a8-e28f-44f5-ab8e-5a928c58258d",
+                            "quantity": 160,
+                            "delivery_date": null,
+                            "fulfilment_information": {
+                                "draft_rfq": 0,
+                                "ongoing_rfq": 0,
+                                "project_excess": 0,
+                                "project_pending": "160.00000000000000000000"
+                            }
+                        }
+                    ],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                            "name": "Item Terms",
+                            "section_type": "ITEM",
+                            "status": "DRAFT",
+                            "custom_fields": [],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                }
+            ],
+            "raw_material_item": null,
+            "alternates": [],
+            "quantity": 40,
+            "measurement_unit": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+            "cost_per_unit": 83,
+            "delivery_schedule": [],
+            "custom_sections": [
+                {
+                    "custom_section_id": "0f57a941-6beb-4857-afbd-a3c3cc9b09df",
+                    "name": "BOM",
+                    "section_type": "BOM",
+                    "status": "DRAFT",
+                    "custom_fields": [
+                        {
+                            "custom_field_id": "37ae23d0-cce5-4c21-9b81-cf9e97718a4d",
+                            "name": "Consumables",
+                            "type": "FLOAT",
+                            "value": 3,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        },
+                        {
+                            "custom_field_id": "78e33091-570f-4c02-9df1-9494b728f114",
+                            "name": "Glueing (sec)",
+                            "type": "FLOAT",
+                            "value": 3,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        },
+                        {
+                            "custom_field_id": "e955a1d9-93ab-40de-98e5-3fe015464096",
+                            "name": "Potting (sec)",
+                            "type": "FLOAT",
+                            "value": 3,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        }
+                    ],
+                    "approve_users": [],
+                    "edit_users": [],
+                    "view_users": []
+                }
+            ],
+            "selected": true
+        },
+        {
+            "entry_id": "949330b3-9b90-4cb7-9688-f081f7fd8375",
+            "bom_item_id": "e3072a3a-ae78-42d8-9cac-2b27eeb350ad",
+            "sub_bom": {
+                "enterprise_bom_id": "d5224cdb-d4a6-47fe-9867-2ec1521d664b",
+                "bom_code": "QASB2",
+                "bom_name": "QASB2",
+                "enterprise_item": {
+                    "enterprise_item_id": "24931b6e-19b6-4355-9598-e1de33da1a2b",
+                    "code": "A SUB BOM 3",
+                    "name": "A SUB BOM 3",
+                    "measurement_units": {
+                        "item_measurement_units": [
+                            {
+                                "abbreviation": "units",
+                                "measurement_unit_id": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+                                "measurement_unit_category": "UNITS",
+                                "measurement_unit_value_type": "DECIMAL",
+                                "measurement_unit_primary_name": "Units"
+                            }
+                        ]
+                    },
+                    "tags": []
+                }
+            },
+            "sub_bom_items": [
+                {
+                    "entry_id": "0595f687-8196-4acd-97c5-ea7092e094e3",
+                    "bom_item_id": "571573a3-9df4-4dae-91bf-2ca1cb63ce99",
+                    "sub_bom": null,
+                    "sub_bom_items": null,
+                    "raw_material_item": {
+                        "enterprise_item_id": "85ad1be6-5581-43de-84dd-a5886ac13c7c",
+                        "code": "RM5",
+                        "name": "RM5",
+                        "measurement_units": {
+                            "item_measurement_units": [
+                                {
+                                    "abbreviation": "pcs",
+                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "measurement_unit_category": "UNITS",
+                                    "measurement_unit_value_type": "DECIMAL",
+                                    "measurement_unit_primary_name": "Pieces"
+                                }
+                            ]
+                        },
+                        "tags": [
+                            "test1",
+                            "test2",
+                            "tag2",
+                            "new tag",
+                            "Capacitor"
+                        ]
+                    },
+                    "alternates": [],
+                    "quantity": 80,
+                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                    "cost_per_unit": 1,
+                    "delivery_schedule": [
+                        {
+                            "delivery_schedule_item_id": "b53ab2ca-e56c-4f66-b5b1-8dbe0406a49d",
+                            "quantity": 80,
+                            "delivery_date": null,
+                            "fulfilment_information": {
+                                "draft_rfq": 0,
+                                "ongoing_rfq": 0,
+                                "project_excess": 0,
+                                "project_pending": "80.00000000000000000000"
+                            }
+                        }
+                    ],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                            "name": "Item Terms",
+                            "section_type": "ITEM",
+                            "status": "DRAFT",
+                            "custom_fields": [],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                },
+                {
+                    "entry_id": "01078c99-2eca-4a53-ae59-a45007a229cf",
+                    "bom_item_id": "d1decf96-fba2-40f6-a27e-ae9b1869ce8a",
+                    "sub_bom": null,
+                    "sub_bom_items": null,
+                    "raw_material_item": {
+                        "enterprise_item_id": "4ca53638-417d-4d59-83a5-e418f1f23781",
+                        "code": "RM6",
+                        "name": "RM6",
+                        "measurement_units": {
+                            "item_measurement_units": [
+                                {
+                                    "abbreviation": "pcs",
+                                    "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                                    "measurement_unit_category": "UNITS",
+                                    "measurement_unit_value_type": "DECIMAL",
+                                    "measurement_unit_primary_name": "Pieces"
+                                }
+                            ]
+                        },
+                        "tags": [
+                            "test1",
+                            "test2",
+                            "tag2",
+                            "new tag",
+                            "Capacitor"
+                        ]
+                    },
+                    "alternates": [],
+                    "quantity": 80,
+                    "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                    "cost_per_unit": 2,
+                    "delivery_schedule": [
+                        {
+                            "delivery_schedule_item_id": "cae10666-8b19-4f3e-9787-c66d7d8bc96d",
+                            "quantity": 80,
+                            "delivery_date": null,
+                            "fulfilment_information": {
+                                "draft_rfq": 0,
+                                "ongoing_rfq": 0,
+                                "project_excess": 0,
+                                "project_pending": "80.00000000000000000000"
+                            }
+                        }
+                    ],
+                    "custom_sections": [
+                        {
+                            "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                            "name": "Item Terms",
+                            "section_type": "ITEM",
+                            "status": "DRAFT",
+                            "custom_fields": [],
+                            "approve_users": [],
+                            "edit_users": [],
+                            "view_users": []
+                        }
+                    ],
+                    "selected": true
+                }
+            ],
+            "raw_material_item": null,
+            "alternates": [],
+            "quantity": 40,
+            "measurement_unit": "66d42245-5a0d-4801-8cb2-43bf627f7cbe",
+            "cost_per_unit": 6,
+            "delivery_schedule": [],
+            "custom_sections": [
+                {
+                    "custom_section_id": "0f57a941-6beb-4857-afbd-a3c3cc9b09df",
+                    "name": "BOM",
+                    "section_type": "BOM",
+                    "status": "DRAFT",
+                    "custom_fields": [
+                        {
+                            "custom_field_id": "1a67d50d-5dc3-474f-be49-c189613cfa40",
+                            "name": "Consumables",
+                            "type": "FLOAT",
+                            "value": 1,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        },
+                        {
+                            "custom_field_id": "21da5a13-d560-4c54-b038-488f93af576c",
+                            "name": "Potting (sec)",
+                            "type": "FLOAT",
+                            "value": 1,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        },
+                        {
+                            "custom_field_id": "123ede9a-8884-4bda-8b23-04d75902b011",
+                            "name": "Glueing (sec)",
+                            "type": "FLOAT",
+                            "value": 1,
+                            "attachments": [],
+                            "description": "",
+                            "is_locked": true,
+                            "is_required": false,
+                            "is_visible": true,
+                            "is_negotiable": false,
+                            "is_mandatory": false
+                        }
+                    ],
+                    "approve_users": [],
+                    "edit_users": [],
+                    "view_users": []
+                }
+            ],
+            "selected": true
+        },
+        {
+            "entry_id": "e14990dd-4093-4d21-828f-c487e929e5d7",
+            "bom_item_id": "3b66fb52-ed7d-4764-be97-5feb7b8719ed",
+            "sub_bom": null,
+            "sub_bom_items": null,
+            "raw_material_item": {
+                "enterprise_item_id": "90bfae18-ba2e-4390-a3b0-f00a92802366",
+                "code": "RM7",
+                "name": "RM7",
+                "measurement_units": {
+                    "item_measurement_units": [
+                        {
+                            "abbreviation": "pcs",
+                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "measurement_unit_category": "UNITS",
+                            "measurement_unit_value_type": "DECIMAL",
+                            "measurement_unit_primary_name": "Pieces"
+                        }
+                    ]
+                },
+                "tags": [
+                    "test1",
+                    "test2",
+                    "tag2",
+                    "new tag",
+                    "Capacitor"
+                ]
+            },
+            "alternates": [],
+            "quantity": 40,
+            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+            "cost_per_unit": 1,
+            "delivery_schedule": [
+                {
+                    "delivery_schedule_item_id": "9b540b63-ae1f-4f4d-8d96-232a88bd9f9b",
+                    "quantity": 40,
+                    "delivery_date": null,
+                    "fulfilment_information": {
+                        "draft_rfq": 0,
+                        "ongoing_rfq": 0,
+                        "project_excess": 0,
+                        "project_pending": "40.00000000000000000000"
+                    }
+                }
+            ],
+            "custom_sections": [
+                {
+                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                    "name": "Item Terms",
+                    "section_type": "ITEM",
+                    "status": "DRAFT",
+                    "custom_fields": [],
+                    "approve_users": [],
+                    "edit_users": [],
+                    "view_users": []
+                }
+            ],
+            "selected": true
+        },
+        {
+            "entry_id": "d7ef69be-e2dc-45af-a966-edaaa6e69a88",
+            "bom_item_id": "52da4d26-ab7e-43b7-8ea0-72e48da94c77",
+            "sub_bom": null,
+            "sub_bom_items": null,
+            "raw_material_item": {
+                "enterprise_item_id": "1687d1d7-d030-4767-bc2c-49b769e459c0",
+                "code": "RM8",
+                "name": "RM8",
+                "measurement_units": {
+                    "item_measurement_units": [
+                        {
+                            "abbreviation": "pcs",
+                            "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+                            "measurement_unit_category": "UNITS",
+                            "measurement_unit_value_type": "DECIMAL",
+                            "measurement_unit_primary_name": "Pieces"
+                        }
+                    ]
+                },
+                "tags": [
+                    "test1",
+                    "test2",
+                    "tag2",
+                    "new tag",
+                    "Capacitor"
+                ]
+            },
+            "alternates": [],
+            "quantity": 40,
+            "measurement_unit": "21213178-90a1-4663-bd7c-8b79dedc295a",
+            "cost_per_unit": 2,
+            "delivery_schedule": [
+                {
+                    "delivery_schedule_item_id": "73190345-501d-486f-8e03-438078818322",
+                    "quantity": 40,
+                    "delivery_date": null,
+                    "fulfilment_information": {
+                        "draft_rfq": 0,
+                        "ongoing_rfq": 0,
+                        "project_excess": 0,
+                        "project_pending": "40.00000000000000000000"
+                    }
+                }
+            ],
+            "custom_sections": [
+                {
+                    "custom_section_id": "ee6e205a-455e-44b6-802e-6f53fe1a8ce4",
+                    "name": "Item Terms",
+                    "section_type": "ITEM",
+                    "status": "DRAFT",
+                    "custom_fields": [],
+                    "approve_users": [],
+                    "edit_users": [],
+                    "view_users": []
+                }
+            ],
+            "selected": true
+        }
+    ],
+    "slabs": [
+        {
+            "entry_id": "9926c634-e552-429e-a459-3f7a87b4b43d",
+            "quantity": 10
+        },
+        {
+            "entry_id": "48505402-8920-49e3-8742-0465dc66b6e4",
+            "quantity": 20
+        }
+    ]
+}
+
+//INTERFACE FOR BOM
+
+export interface IProjectBOMResponse {
+    entry_id: string;
+    enterprise_bom: {
+        bom_code: string;
+        bom_name: string;
+        enterprise_bom_id: string;
+        enterprise_item: {
+            measurement_units: {
+                item_measurement_units: {
+                    abbreviation: string;
+                    measurement_unit_id: string;
+                    measurement_unit_category: string;
+                    measurement_unit_value_type: string;
+                    measurement_unit_primary_name: string;
+                }[];
+            };
+        };
+    };
+    has_sub_boms: boolean;
+    created_datetime: string;
+    modified_datetime: string;
+    deleted_datetime: string | null;
+    quantity: number;
+    total: number;
+    created_by_user_id: string;
+    modified_by_user_id: string;
+    deleted_by_user_id: string;
+    measurement_unit: {
+        measurement_unit_id: string;
+        measurement_unit_primary_name: string;
+        abbreviation: string;
+    };
+    currency_id: string;
+    custom_sections: ICustomSection[];
+    bom_items?: IProjectBOMItem[];
+    addProjectBOM?: boolean;
+    errors?: { [key: string]: string };
+    bom_valid: boolean;
+    sub_boms_valid: boolean;
+    project?: {
+        project_id: string;
+    };
+    base_bom_module_linkage_id: string;
+    slabs: {
+        entry_id: string;
+        quantity: number;
+    }[];
+}

@@ -1,0 +1,207 @@
+{
+    "entry_id": "3b32d9b8-7fc7-4e38-a2d7-28907b77bcc9",
+    "base_bom_module_linkage_id": "d0cf0be9-5e84-477c-a5a8-fb98d2550ea5",
+    "created_datetime": "2025-09-30T12:49:05.277144Z",
+    "modified_datetime": "2025-09-30T12:49:05.277165Z",
+    "deleted_datetime": null,
+    "created_by_user_id": null,
+    "modified_by_user_id": null,
+    "deleted_by_user_id": null,
+    "enterprise_bom": {
+        "enterprise_bom_id": "95d993b1-05d9-4f83-bdde-d4d9cdc5fad9",
+        "bom_code": "PCB Assembly 1",
+        "bom_name": "PCB Assembly - Motor Control Board (BOM 1)"
+    },
+    "project": {
+        "project_id": "490a89a2-3a35-473b-8c4d-09d65a91a1dd",
+        "project_code": "P000110"
+    },
+    "quantity": 1,
+    "measurement_unit": {
+        "measurement_unit_id": "21213178-90a1-4663-bd7c-8b79dedc295a",
+        "measurement_unit_primary_name": "Pieces",
+        "measurement_unit_category": "UNITS",
+        "measurement_unit_value_type": "DECIMAL",
+        "abbreviation": "pcs"
+    },
+    "currency": {
+        "currency_code_abbreviation": "INR",
+        "currency_name": "Indian Rupee",
+        "currency_symbol": "₹",
+        "entry_id": "a8c3e3fd-b05f-4d09-bd2f-9fedd07d0ec3"
+    },
+    "currency_id": "a8c3e3fd-b05f-4d09-bd2f-9fedd07d0ec3",
+    "total": 268,
+    "custom_sections": [
+        {
+            "custom_section_id": "dfcb6b54-f7bf-4f85-8391-48dc28ccd6bf",
+            "name": "BOM",
+            "section_type": "BOM",
+            "status": "DRAFT",
+            "custom_fields": [
+                {
+                    "custom_field_id": "fad86109-c3f0-460a-9267-1d403b708848",
+                    "name": "No. of boards",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "c97af2ee-dfd1-4f33-8ee4-14289ca3b2d9",
+                    "name": "Machine Rate per minute",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "51d451e4-c201-4e90-9903-7ed71e468c67",
+                    "name": "Cleaning time per board",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "a3400222-e178-49ce-9ffa-eaafcd2b65de",
+                    "name": "Fixture setup time",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "67f23607-401b-4c8c-a0f4-aebfc0401728",
+                    "name": "No. of Fixtures",
+                    "type": "SHORTTEXT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "0b5e0320-4d4d-4ef1-bbc5-4b3288af3a4b",
+                    "name": "No. of pads",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "02a29267-eed4-4873-bf52-c3c8e11a7c6f",
+                    "name": "Setup time (hrs)",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "957bd2ba-d94b-42a4-b616-f6180d7fec77",
+                    "name": "Application time per pad",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "f2cb769c-256e-4980-a8ef-6363a10ee97e",
+                    "name": "No. of shields",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "7b6cbad5-98c7-43ad-a3cf-b5c7eb81b4ac",
+                    "name": "Soldering time",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "031a53fd-83a3-499d-91ac-3bb907c992d7",
+                    "name": "No. of ECNs",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                },
+                {
+                    "custom_field_id": "430aab62-eac5-432a-a083-1a5b79aa2ba5",
+                    "name": "Avg Engineering Time per ECN",
+                    "type": "FLOAT",
+                    "value": null,
+                    "attachments": [],
+                    "description": "",
+                    "is_locked": true,
+                    "is_required": false,
+                    "is_visible": true,
+                    "is_negotiable": false,
+                    "is_mandatory": false
+                }
+            ],
+            "approve_users": [],
+            "edit_users": [],
+            "view_users": []
+        }
+    ],
+    "bom_valid": true,
+    "has_sub_boms": true,
+    "sub_boms_valid": true
+}
